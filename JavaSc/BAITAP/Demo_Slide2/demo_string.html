@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Demo về string");
+
+        //Khai báo string
+        let bienString01 = "Đây là biến string 01";
+        let bienString02 = 'Đây là biến string 02';
+        let bienString03 = `Đây là biến string 03`;
+
+        let bienString04 = "String";
+        let bienString05 = `Đây là biến ${bienString04} 05`;
+
+        console.log(bienString01);
+        console.log(bienString02);
+        console.log(bienString03);
+        console.log(bienString05);
+
+        //Demo về khai báo string có ký tự đặc biệt
+        // Khai báo string có ký tự xuống dòng
+
+        let bienString06 = "Đây là biến cso ký tự \nxuống dòng";
+        console.log(bienString06);
+
+        // Khai báo String có ký tự ""
+        // Tôi học ở "FPT Poly"
+        let bienString07 = "Tôi học ở \"FPT Poly\"";
+        let bienString08 = 'Tôi học ở "FPT Poly"';
+
+        console.log(bienString07);
+        console.log(bienString08);
+
+        //Giới thiệu thuộc tính và phương thức
+        // Thuộc tính và phương thức
+
+        let bangChuCai ="etrgyuihihtd";
+        console.log(bangChuCai);
+        // Thuộc tính lenght. Dùng để in ra độ dài/ số ký tự của string
+        console.log(bangChuCai.length);
+
+        //Phương thức upperCase
+        console.log(bangChuCai.toUpperCase());
+
+        // Phương thức trim(). Dùng để xóa ký tự khoảng trắng đầu và cuối
+        let username = "  luoansd   ";
+        console.log(username);
+        console.log(username.trim());
+
+        //Phương charAt. Dùng để lấy ký tự tại vị trí index
+        console.log(bangChuCai.charAt(0));
+        console.log(bangChuCai.charAt(1));
+        console.log(bangChuCai.charAt(2));
+        console.log(bangChuCai.charAt(3));
+
+        // Phương thức subString. Dùng để cắt chuỗi thành chuỗi nhỏ hơn
+        //substring: cắt từ vị trí A đến sát vị trí B
+        console.log(bangChuCai.substring(1,3));
+
+        //substr: cắt từ ký tự A đủ B ký tự nữa
+        console.log(bangChuCai.substr(1,3)); // trg
+        console.log(bangChuCai.substr(2,3)); //rgy
+
+        //Demo nối chuỗi, nối string
+        let bienHo = "Nguyễn";
+        let bienTenDem = "Thị";
+        let bienTen = "B"
+        
+        console.log(bienHo.concat(" ",bienTen));
+        console.log(bienHo+bienTen);
+        console.log(bienHo+" "+bienTen);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Demo number");
+        //Khai báo
+        let namSinh = 2000;
+        let diemso = 9.9;
+
+        console.log(namSinh);
+        console.log(diemso);
+
+        //Demo isNaN
+        let namSinhString = "Hai nghìn"; //Đây là biến String
+        console.log(isNaN(namSinh));    // false
+        console.log(isNaN(namSinhString)); // true
+
+        //Demo typeof. Để in ra kiểu dữ liệu của biến
+        console.log(typeof(namSinh));
+        console.log(typeof(namSinhString));
+        console.log(typeof("2000"));
+
+        // Ép kiểu chuỗi thành số
+        let bienTuoi = "18";
+        console.log(typeof(bienTuoi));
+        console.log(typeof(Number(bienTuoi)));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn tập form</title>
+</head>
+
+<body>
+    <h1>Form nhập thông tin sinh viên</h1>
+    <form onsubmit="return false">
+        <input type="text" id="tenSinhVienId"  placeholder="Nhập tên sinh viên">
+        <div style="color: red; display: none;" id="thongBaoLoi">Tên sinh viên là thông tin bắt buộc</div>
+        <!-- display: none -> ẩn -->
+        <!-- display: block -> hiển thị -->
+        <div>
+            <br>
+            <select id="queQuan">
+                <option value=""> Chọn quê quán</option>
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="Hồ Chí Minh">HCM</option>
+            </select>
+            <div style="color: red; display: none;" id="queQuanThongBaoLoi">Vui Lòng chọn quê quán</div>
+        </div>
+
+        <div>
+            <br>
+            <input type="radio" value="Nam" name="gioiTinh"> Nam
+            <input type="radio" value="Nữ" name="gioiTinh"> Nữ
+            <input type="radio" value="Không" name="gioiTinh"> Không xác định
+            <div style="color: red; display: none;" id="gioiTinhThongBaoLoi">Vui lòng chọn giới tính</div>
+        </div>
+
+        <div>
+            <br>
+            <input type="checkbox" name="soThich" value="Bóng bàn"> Bóng bàn
+            <input type="checkbox" name="soThich" value="Bóng đá"> Bóng đá
+            <input type="checkbox" name="soThich" value="Bóng rổ"> Bóng rổ
+        </div>
+        <div>
+            <br>
+            <button type="submit" onclick="validateForm()">Lưu thông tin</button>
+        </div>
+
+
+    </form>
+    <script src="form.js"></script>
+</body>
+
+</html>

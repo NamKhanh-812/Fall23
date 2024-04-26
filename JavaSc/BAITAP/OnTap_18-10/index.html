@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khánh đẹp trai</title>
+</head>
+<body>
+    <form style="text-align: center;" onsubmit="return false">
+        <h1>Giỏ hàng</h1>
+
+        <div style="margin-bottom: 10px;">
+            <span>Email:</span>
+            <input type="text" id="email">
+            <p style="color: red; display: none;" id="emailTrong">Email là thông tin bắt buộc</p>
+            <p style="color: red; display: none;" id="emailDinhDang">Email không đúng định dạng</p>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <span>Số điện thoại:</span>
+            <input type="text" id="soDienThoai">
+            <p style="color: red; display: none;" id="sdtTrong">Số điện thoại là thông tin bắt buộc</p>
+            <p style="color: red; display: none;" id="sdtDinhDang">Số điện thoại không đúng định dạng</p>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <span>Địa chỉ:</span>
+            <input type="text" id="diaChi">
+            <p style="color: red; display: none;" id="diaChiTrong">Địa chỉ là thông tin bắt buộc</p>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <span>Vận chuyển:</span>
+            <input type="radio" name="vanChuyen" value="Hỏa tốc" onchange="thayDoiPhi('hoatoc')"> Hỏa tốc
+            <input type="radio" name="vanChuyen" value="Nhanh" onchange="thayDoiPhi('nhanh')"> Nhanh
+            <p style="color: red; display: none;" id="vanChuyenTrong">Vận chuyển là thông tin bắt buộc</p>
+        </div>
+        <div>
+            <span>Vận chuyển:</span>
+            <input type="text"  id="phiVanChuyen"> Hỏa tốc
+        </div>
+
+
+
+
+
+        <div>
+            <hr>
+            <button onclick="validate()">Submit</button>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Demo ép kiểu");
+
+        //1. Ép kiểu từ String sang Number
+        // let string1 = "2000";
+        // console.log(typeof(string1)); // Kiểm tra kiểu dữ liệu
+
+        // let number1 = Number(string1);
+        // console.log(number1);
+        // console.log(typeof(number1));
+
+
+        // let namSinh = prompt("Nhập năm sinh:");
+        // console.log(namSinh);
+        // console.log(typeof(namSinh));
+        // console.log(namSinh+5); //KQ không như mong muốn
+        // console.log(Number(namSinh)+5);
+
+        // Giá trị lấy được từ prompt là STRING => phải ép kiểu trc khi làm bài toán
+        
+
+
+        //2. Ép kiểu từ Number sang String
+        let number2 = 2000;
+        console.log(typeof(number2)); // KQ: number
+
+        let string2 = String(number2);
+        let string3 = number2+"";
+        console.log(typeof(string2));
+        console.log(typeof(string3));
+
+        //3. Ép kiểu từ Array sang String
+
+        let arr01 =["Anh","Bảo","Trung","Duy"];
+        let stringViDu3 = arr01.join("/");
+        // Note: muốn nối với nhau bằng ký tự gì thì truyền vào tham số
+        console.log(stringViDu3);
+        console.log(typeof(stringViDu3));
+
+
+        //4. Ép kiểu từ String sang Array
+
+        let stringViDu4 = "Anh / Bảo / Trung / Duy";
+        let arrViDu4 = stringViDu4.split(" / ");
+        console.log(arrViDu4);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

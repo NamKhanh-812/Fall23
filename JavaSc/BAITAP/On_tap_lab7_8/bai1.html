@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Thông tin cá nhân</h1>
+    <form onsubmit="return false">
+        <div>
+            <input type="text" id="hoVaTen" placeholder="Họ và tên">
+            <div id="thongBaoTen" style="display: none;">Thông tin không được để trống</div>
+        </div>
+        <div>
+            <br>
+            <input type="text" id="namSinh" placeholder="Năm sinh">
+            <div id="thongBaoNamSinh" style="display: none;">Thông tin không được để trống</div>
+            <div id="thongBaoSoNamSinh" style="display: none;">Năm sinh phải là số</div>
+            <div id="thongBaoNamSinhLon" style="display: none;">Năm sinh không được lớn hơn năm hiện tại</div>
+        </div>
+        <div>
+            <br>
+            <input type="text" id="sdt" placeholder="Số điện thoại">
+            <div id="thongBaoSDT" style="display: none;">Thông tin không được để trống</div>
+        </div>
+    
+        <div>
+            <br>
+            <input type="radio" name="gioiTinh" value="Nam"> Nam
+            <input type="radio" name="gioiTinh" value="Nữ"> Nữ
+            <input type="radio" name="gioiTinh" value="Không xác định"> Không xác định
+            <div id="thongBaoGioiTinh" style="display: block;">Thông tin không được để trống</div>
+        </div>
+    
+        <div>
+            <br>
+            <button id="taoMoi" onclick="validate()">Tạo mới</button>
+        </div>
+    </form>
+
+    
+    <script src="bai1.js"></script>
+</body>
+</html>

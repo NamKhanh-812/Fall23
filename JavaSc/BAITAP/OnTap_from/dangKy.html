@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+</head>
+
+<body style="text-align: center;">
+    <h1>Đăng ký tài khoản</h1>
+    <form onsubmit="return false">
+        <div> <!-- Tài khoản -->
+            <input type="text" id="taiKhoan" placeholder="Nhập tài khoản">
+            <div style="color: red; display: none;" id="thongBaoLoiTK"> Vui lòng nhập vào Tài khoản</div>
+        </div>
+
+        <!-- Mật khẩu -->
+        <div>
+            <br>
+            <input type="text" id="matKhau" placeholder="Nhập mật khẩu">
+            <div style="color: red; display: none;" id="thongBaoLoiMK"> Vui lòng nhập vào Mật khẩu</div>
+        </div>
+
+        <!-- Nhập lại mật khẩu -->
+        <div>
+            <br>
+            <input type="text" id="nhapLaiMatKhau" placeholder="Nhập lại mật khẩu">
+            <div style="color: red; display: none;" id="thongBaoLoiNLMK"> Vui lòng nhập lại mật khẩu</div>
+        </div>
+        <div>
+            <br>
+            <button type="submit" onclick="validateDK()"> Đăng ký </button>
+        </div>
+        <script src="dk.js"></script>
+    </form>
+</body>
+
+</html>

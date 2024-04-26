@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nhapso = prompt("Nhập vào 1 số bất kỳ từ 00 đến 99:");
+        let anhapso = Number(nhapso);
+        let so = Math.random()*100;
+
+        console.log("Giải đặc biệt là: ",Math.floor(Number(so)));
+
+
+        if(anhapso==so){
+            console.log("Chúc mừng, bạn đã đoán đúng");
+        }
+        else{
+            console.log("Chúc bạn may mắn lần sau");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

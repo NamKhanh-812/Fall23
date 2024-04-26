@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Form dang ky thong tin ca nhan</h1>
+    <h2>1.Thong tin ca nhan</h2>
+    <form onsubmit="return false">
+        <div>
+            <span>Ho va Ten</span>
+            <br>
+            <input type="text" name="ten" id="Name" placeholder="">
+            <p id="loiName" style="color: red; display: none; ">Ho va Ten bat buoc nhap</p>
+            <br>
+
+            <span>Nam Sinh</span>
+            <br>
+            <input type="text" name="namSinh" id="NamSinh" placeholder="">
+            <p id="loiNamSinh" style="color: red; display: none; ">Nam sinh bat buoc nhap</p>
+            <p id="loiNamSinhSo" style="color: red; display: none; ">Nam sinh bat buoc la so</p>
+            <p id="loiNamSinhLon" style="color: red; display: none; ">Nam sinh bat buoc ko lon hon hien tai</p>
+            <br>
+
+            <span>SDT</span>
+            <br>
+            <input type="text" name="SDT" id="SdT" placeholder="">
+            <p id="loiSDT" style="color: red; display: none; ">SDT bat buoc nhap</p>
+            <p id="loiSDTSo" style="color: red; display: none; ">SDT bat buoc la so</p>
+            <p id="loiSDTKT" style="color: red; display: none; ">SDT bat buoc gom 10 ky tu</p>
+            <br>
+
+            <span>Gioi Tinh</span>
+            <div>
+                <input name="gioiTinh" type="radio" value="Nam">Nam
+                <input name="gioiTinh" type="radio" value="Nu">Nu
+                <input name="gioiTinh" type="radio" value="Ko xac dinh"> Ko Xac Dinh
+            </div>
+            <p id="loiGioiTinh" style="color: red; display: none; ">Chua chon gioi tinh</p>
+            <br>
+
+
+            <button onclick="validate()">Tao moi</button>
+            <br>
+        </div>
+        <script src="onfromnangcao.js"></script>
+    </form>
+</body>
+
+</html>

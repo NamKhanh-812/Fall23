@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkSheng</title>
+    <script src="baitap.js"></script>
+
+</head>
+
+<body style="text-align: center;">
+    <h1>THÔNG TIN SINH VIÊN</h1>
+    <form action="" onsubmit="return false">
+        <input type="text" id="tenSinhVien" placeholder="Nhập tên sinh viên">
+        <div id="loiBatBuoc" style="color: red; display: none;">Thông tin bắt buộc</div>
+        <br>
+        <input type="text" id="tenTaiKhoan" placeholder="Nhập tên tài khoản">
+        <div id="loiBatBuocTK" style="color: red; display: none;">Thông tin bắt buộc</div>
+        <div id="loiTen" style="color: red; display: none;">Tên tài khoản chỉ được chứa chữ không dấu và số</div>
+        <br>
+        <input type="text" id="passWord" placeholder="Nhập mật khẩu">
+        <div id="loiPass" style="color: red; display: none;">Pass phải từ 8 ký tự trở lên</div>
+        <div id="loiPassKT" style="color: red; display: none;">Pass chỉ được chứa chữ không dấu, số và các ký tự (!@#$%^&*)</div>
+        <div id="PassManh" style="color: rgb(72, 255, 0); display: none;">Pass Mạnh</div>
+        <div id="PassOk" style="color: rgb(47, 0, 255); display: none;">Pass Ok</div>
+        <div id="PassYeu" style="color: rgb(255, 0, 200); display: none;">Pass Yếu</div>
+        <br>
+        <input type="text" id="passWordXN" placeholder="Nhập lại passWord">
+        <div id="loiPassXn" style="color: red; display: none;">Pass chưa khớp</div>
+        <br>
+        <input type="text" id="tuoiSinhVien" placeholder="Nhập tuổi sinh viên">
+        <div id="loiBatBuocTuoi" style="color: red; display: none;">Thông tin bắt buộc</div>
+        <div id="loiSo" style="color: red; display: none;">Tuổi phải là số</div>
+        <div id="loiTuoi" style="color: red; display: none;">Tuổi phải từ 1-99</div>
+        <br>
+        <input type="text" id="emailSinhVien" placeholder="Nhập email sinh viên">
+        <div id="loiBatBuocEmail" style="color: red; display: none;">Email phải có ít nhất 5 ký tự (a-zA-Z0-9) và đuôi @</div>
+        <div id="loiEmail" style="color: red; display: none;">Email chỉ nhận đuôi
+            @gmail.com hoặc @fpt.edu.vn</div>
+    </form>
+    <div>
+        <br>
+        <input type="radio" name="gioiTinh" value="Nam"> Nam
+        <input type="radio" name="gioiTinh" value="Nữ"> Nữ
+        <input type="radio" name="gioiTinh" value="Không xác định"> Không xác định
+    </div>
+    <div id="loiBatBuocGT" style="color: red; display: none;">Thông tin bắt buộc</div>
+    <div>
+        <br>
+        <input type="checkbox" name="monHoc" value="Java"> Java
+        <input type="checkbox" name="monHoc" value="SQL"> SQL
+        <input type="checkbox" name="monHoc" value="HTML/CSS"> HTML/CSS
+        <input type="checkbox" name="monHoc" value="C/C++"> C/C++
+    </div>
+    <div id="loiBatBuocMH" style="color: red; display: none;">Thông tin bắt buộc</div>
+
+    <div>
+        <br>
+        <select name="" id="queQuan">
+            <option value="">Chọn quê quán</option>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Hà Tĩnh">Hà TĨnh</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Khác">Khác</option>
+        </select>
+    </div>
+    <div id="loiBatBuocQQ" style="color: red; display: none;">Thông tin bắt buộc</div>
+    <br>
+    <br>
+    <button onclick="validateTT()">Lưu thông tin</button>
+</body>
+
+</html>

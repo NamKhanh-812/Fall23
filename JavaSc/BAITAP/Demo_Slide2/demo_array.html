@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Demo array");
+        // cách khai báo array
+        let tenArr =["Anh","Bảo","Trung","Duy"];
+        let tuoiArr=[18,19,20];
+        let tenLopArr = new Array("JS cơ bản","JS nâng cao","JS siêu nâng cao");
+
+        console.log(tenArr);
+        console.log(tuoiArr);
+        console.log(tenLopArr);
+
+        // Demo cách lấy giá trị của 1 phần tử trong mảng
+
+        console.log(tenArr[0]);
+        console.log(tenArr["0"]);
+
+        // Ghi đè giá trị vào một phần tử của mảng
+
+        tenArr[1]="Bảo fake";
+        console.log(tenArr);
+
+        // Giới thiệu thuộc tính và phương thức của mảng 
+        // Demo thuộc tính lenght | Dùng để lấy ra số lượng của mảng
+        console.log(tenArr.length);
+
+        // Demo cách thêm phần tử vào mảng
+        tenArr.push("Phúc"); // Thêm phần tử vào cuối mảng
+        console.log(tenArr);
+
+        tenArr.unshift("Phúc đứng đầu");
+        console.log(tenArr);
+
+        // Demo cách xóa phần tử khỏi mảng
+        tenArr.pop(); // Xóa phần tử cuối
+        console.log(tenArr);
+
+        tenArr.shift(); // Xóa phần tửu đầu
+        console.log(tenArr);
+
+        // Demo xóa ở giữa 
+        // Kiểm tra đến vị trí A rồi xóa B ký tự
+        tenArr.splice(1,2,"Bảo fake 2","Chung fake");
+        console.log(tenArr);
+
+        // Ứng dụng splice để xóa phần tử ở giữa
+        //tenArr.splice1(1,1); // Xóa phần tử ở vị trí 1
+       
+        // Thêm phần tử vào giữa, vào đâu đó
+
+        console.log(tuoiArr);
+        tuoiArr.splice(1,0,17);
+        console.log(tuoiArr);
+
+        // Demo tìm vị trí phần tử trong mảng
+
+        let dongVatArr =["Chó","Mèo","Ngựa","Rồng","Chó"];
+        console.log(dongVatArr.indexOf("Chó"));
+        console.log(dongVatArr.lastIndexOf("Chó"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <h1>TITLE</h1>
+        <div>
+            <span>Tên:</span>
+            <input type="text" id="ten">
+            <p style="color: red; display: none;" id="bb1">Thông tin bắt buộc</p>
+        </div>
+
+        <div>
+            <span>Email:</span>
+            <input type="text" id="email">
+            <p style="color: red; display: none;" id="bb2">Thông tin bắt buộc</p>
+            <p style="color: red; display: none;" id="dinhDangEmail">Email không đúng định dạng</p>
+        </div>
+        <div>
+    
+            <span>Mật khẩu:</span>
+            <input type="text" id="matKhau">
+            <p  style="color: red; display: none;" id="bb3">Thông tin bắt buộc</p>
+            <p  style="color: red; display: none;" id="nho8">Mật khẩu phải lớn hơn hoặc bằng 8</p>
+
+            <p style="color: red; display: none;" id="dinhDangMK">Mật khẩu không đúng định dạng</p>
+        </div>
+        <button onclick="validate()">Vào</button>
+    </form>
+    <script src="Bai2.js"></script>
+</body>
+</html>

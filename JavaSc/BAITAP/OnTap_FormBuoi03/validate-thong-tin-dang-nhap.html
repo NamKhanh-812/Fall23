@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <h1>Thông tin đăng nhập</h1>
+
+        <!-- Khai báo HTML input tên đăng nhập -->
+        <div>
+            <span>Tên đăng nhập:</span>
+            <input id="ten-dang-nhap" type="text">
+            <p id="tbloi-bat-buoc" style="color: red; display: none;">Tên đăng nhập là thông tin bắt buộc</p>
+            <p id="tbloi-ky-tu" style="color: red; display: none;">Tên đăng nhập chỉ bao gồm chữ vào số</p>
+        </div>
+
+        <!-- Khai báo HTML input mật khẩu -->
+        <div>
+            <span>Mật khẩu:</span>
+            <input id="mat-khau" type="text">
+            <p id="tbloi-do-dai" style="color: red; display: none;">Mật khẩu chứa ít nhất 8 ký tự</p>
+            <p id="tbloi-ky-tu-mat-khau" style="color: red; display: none;">Tên đăng nhập chỉ bao gồm chữ, số và ký tự đặc biệt !@#$%^&*</p>
+            <p id="tb-mat-khau-manh" style="color: green; display: none;">Mật Khẩu Mạnh</p>
+            <p id="tb-mat-khau-trung-binh" style="color: orange; display: none;">Mật Khẩu Trung Bình</p>
+            <p id="tb-mat-khau-yeu" style="color: red; display: none;">Mật Khẩu Yếu</p>
+        </div>
+
+        <!-- Khai báo html button Lưu -->
+        <div>
+            <button onclick="validateForm()">Lưu Thông Tin</button>
+        </div>
+    </form>
+
+
+    <!-- Code JS -->
+    <script>
+        function validateForm() {
+            // Khai báo biến nhận giá trị nhập vào
+            let tenDangNhap = document.getElementById("ten-dang-nhap").value;
+            let matKhau = document.getElementById("mat-khau").value;
+
+            // Log thử giá trị nhập vào
+            console.log("tenDangNhap", tenDangNhap);
+            console.log("matKhau", matKhau);
+
+            // Gọi hàm validate tên đăng nhập
+            validateTenDangNhap(tenDangNhap);
+
+            // Gọi hàm validate mật khẩu
+            validateMatKhau(matKhau)
+        }
+
+
+        function validateTenDangNhap(paramTenDangNhap) {
+            // 1. Ẩn tất cả thông báo cũ
+            document.getElementById("tbloi-bat-buoc").style.display = "none";
+            document.getElementById("tbloi-ky-tu").style.display = "none";
+
+            // 2. Loại bỏ khoảng trắng đầu và cuối | dùng trim()
+            paramTenDangNhap = paramTenDangNhap.trim();
+
+            // 3. Validate bắt buộc
+            if (paramTenDangNhap === "") {
+                // Hiển thị lỗi
+                document.getElementById("tbloi-bat-buoc").style.display = "block";
+                return false;
+            }
+
+            // 4. Kiểm tra chỉ gồm ký tự số và chữ không dấu
+            let danhSachKyTuThoaMan = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+            // Ép kiểu tên đăng nhập từ string thành mảng
+            let tenDangNhapArr = paramTenDangNhap.split("");
+            console.log("tenDangNhapArr", tenDangNhapArr);
+
+            // Duyệt từng ký tự của mảng tenDangNhapArr và kiểm tra xem ký tự có nằm trong danh sách ký tự thỏa mãn không
+            for(let item of tenDangNhapArr) {
+                if(danhSachKyTuThoaMan.indexOf(item) < 0) {
+                    // Hiển thị lỗi
+                    document.getElementById("tbloi-ky-tu").style.display = "block";
+                    return false;
+                }
+            }
+
+            return true;
+
+        }
+
+        function validateMatKhau(paramMatKhau) {
+            // 1. Ẩn hết tất cả thông báo
+            document.getElementById("tbloi-do-dai").style.display = "none";
+            document.getElementById("tbloi-ky-tu-mat-khau").style.display = "none";
+            document.getElementById("tb-mat-khau-manh").style.display = "none";
+            document.getElementById("tb-mat-khau-trung-binh").style.display = "none";
+            document.getElementById("tb-mat-khau-yeu").style.display = "none";
+
+
+            // Validate độ dài
+            if (paramMatKhau.length < 8) {
+                // Hiển thị lỗi
+                document.getElementById("tbloi-do-dai").style.display = "block";
+
+                return false;
+            }
+
+            // Validate ký tự đặc biệt
+            // Khai báo mạng ký tự thỏa mãn
+            let danhSachKyTuThoaMan = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "^", "&", "*"];
+
+            // Ép kiểu string mật khẩu thành array
+            let arr = paramMatKhau.split("");
+
+            // Duyệt mảng để tìm ký tự không thỏa mãn
+            for (let item of arr) {
+                if (danhSachKyTuThoaMan.indexOf(item) < 0) {
+                    // Tìm được ký tự lỗi ==> Thông báo lỗi
+                    document.getElementById("tbloi-ky-tu-mat-khau").style.display = "block";
+                    
+                    return false;
+                }
+            }
+
+            // Mật khẩu chỉ gồm ký tự thỏa mãn và ít nhất 8 ký tự
+            // Khai báo mảng trung gian
+            let arrSo = [] // Để lưu các ký tự số của mật khẩu
+            let arrChu = [] // Để lưu các ký tự chữ của mật khẩu
+            let arrKyTuDacBiet = [] // Để lưu các ký tự đặc biệt của mật khẩu
+
+            let danhSachSo = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+            let danhSachChu = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+            let danhSachKyTuDacBiet = ["!", "@", "#", "$", "%", "^", "&", "*"]
+
+            for (let item of arr) {
+                if (danhSachSo.indexOf(item) >= 0) {
+                    arrSo.push(item);
+                } else if (danhSachChu.indexOf(item) >= 0) {
+                    arrChu.push(item)
+                } else if (danhSachKyTuDacBiet.indexOf(item) >= 0) {
+                    arrKyTuDacBiet.push(item);
+                }
+            }
+
+            // Thông báo độ mạnh yếu của mật khẩu
+            if (arrSo.length > 0 && arrChu.length > 0 && arrKyTuDacBiet.length > 0) {
+                // Hiển thị mật khẩu mạnh
+                document.getElementById("tb-mat-khau-manh").style.display = "block";
+            } else if(arrChu.length > 0 && arrSo.length > 0) {
+                // Hiển thị mật khẩu trung bình
+                document.getElementById("tb-mat-khau-trung-binh").style.display = "block";
+            } else {
+                document.getElementById("tb-mat-khau-yeu").style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+</html>

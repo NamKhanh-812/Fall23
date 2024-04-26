@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Nhập
+        let soA = prompt("Nhập số A");
+        let soB = prompt("Nhập số B");
+        let soC = prompt("Nhập số C");
+        let nA = Number(soA);
+        let nB = Number(soB);
+        let nC = Number(soC);
+
+        console.log("Số A là: ", nA);
+        console.log("Số B là: ", nB);
+        console.log("Số C là: ", nC);
+
+        let tbc = (nA + nB + nC) / 3;
+        console.log("TBC của 3 số là: ", tbc);
+        if (nA == nB && nB == nC) {
+            console.log("3 số bằng nhau");
+        }
+        else if (nA > nB) {
+            if (nA > nC) {
+                console.log("Số lớn là: ", nA);
+            }
+            if (nA < nC) {
+                console.log("Số lớn là: ", nC);
+            }
+        }
+        else if (nA == nB) {
+            console.log("Số A = số B và = ", nA);
+        }
+        else if (nB > nA) {
+            if (nB > nC) {
+                console.log("Số lớn là: ", nB);
+            }
+            if (nB < nC) {
+                console.log("Số lớn là: ", nC);
+            }
+        }
+        else if (nA > nC) {
+            console.log("Số lớn là: ", nA);
+        }
+        else if (nA == nC) {
+
+            console.log("Số A = số C và = ", nA);
+        }
+        else if (nB == nC) {
+            console.log("Số B = số C và = ", nC);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

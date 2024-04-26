@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Demo về DOM");
+        // Lưu ý 
+        // Code JS sẽ gen tuần tự từ trên xuống dưới. Nên viết code JS ở vị trí không hợp lý thì sẽ xuất hiện tình trạng undefined 
+        console.log(document.getElementById("thu_nhat")); // trả về null
+    </script>
+</head>
+<body>
+    
+    <h1>Bảng xếp hạng</h1>
+
+
+
+    <div>
+        <img id="anh_thu_1" src="img/th.jpg" alt="">
+    </div>
+
+
+
+
+
+    <p id="thu_nhat"class="top4">Man City</p>
+    <p id="thu_hai"class="top4">Tottenham</p>
+    <p id="thu_ba"class="top4">Arsenal</p>
+    <p id="thu_bon"class="top4">Liverpool</p>
+    <button onclick="alert('Bạn vừa ấn vào nút')">Xuất hiện alert</button>
+    <button onclick="hamThemDeThu()">Gọi function</button>
+    <button onclick="doimauchu()">Đổi màu tottenham</button>
+
+
+
+
+    <script>
+        console.log(document.getElementById("thu_nhat"));
+        console.log(document.getElementById("thu_ba")); 
+        console.log(document.getElementsByClassName("top4"));// trả về mảng gồm 4 thẻ p 
+        console.log(document.getElementsByClassName("top4")[0])// Lấy ra node con đầu
+        console.log(document.getElementsByClassName("top4").item(0)) // cách khác để lấy ra node con đầu tiên
+
+        console.log("    Lấy thông tin node theo tag name");
+        console.log(document.getElementsByTagName("p"));
+        console.log(document.getElementsByTagName("p")[1]); // lấy node con thứ 2
+
+
+        // Phần 2: Sửa thông tin node
+        console.log("// Phần 2: Sửa thông tin node");
+        // Lấy thông tin của node
+        let nodeThu4= document.getElementById("thu_bon");
+        console.log(nodeThu4);
+
+
+        // Sửa thông tin node
+        // Sử dụng innerText
+        nodeThu4.innerText="Mu";
+        nodeThu4.innerText= '<h1>Mu</h1>';
+        //Sử dụng innerHTML
+        document.getElementById("thu_ba").innerHTML = '<h1>Arsenal</h1>';
+
+        // Lưu ý phân biệt innerText và innerHTML
+        // khi nào muốn gắn thẻ html vào node thfi dùng innerHTMl
+        // MUons sửa text thì dùng innerText
+
+        let nodeThuNhat = document.getElementById("thu_nhat");
+        nodeThuNhat.style="color: blue";
+
+        // đổi backgroup
+        // nodeThuNhat.style="background-color: gray";
+
+        nodeThuNhat.style.background= "gray"; // cách viết 1
+        nodeThuNhat.style["background"] = "red";  //cách viết 2
+
+        // 2. thay đổi thuộc tính src cho ảnh
+        // khai báo 
+
+        // Thấy thông tin của node 
+
+        let nodeAnhThuNhat= document.getElementById("anh_thu_1");
+        nodeAnhThuNhat.src="img/o.jpg";
+
+
+
+
+        // bắt sự kiện, tương tác của người dùng
+        // có các sự kiện kiểu: click, hover, đổi giá trị...
+
+        // demo sự kiện click 
+        // khai báo button
+        //khai báo function
+        function hamThemDeThu() {
+            console.log("Đã gọi hàm");
+        }
+        // viết tính năng click button đổi màu chữ tottenham
+
+        function doimauchu() {
+            // cách 1
+            // let mauchu=document.getElementById("thu_hai");
+            // mauchu.style="color: red"
+
+            // cách 2
+            document.getElementById("thu_hai").style["color"]="pink";
+        }
+        // giới thiệu hàm chạy vòng lặp theo 1 khoảng thời gian xác định
+        function hamKiemTraVongLap() {
+            console.log("Bạn đã gọi vào hàm");
+        }
+
+        setInterval(hamKiemTraVongLap(),1000);
+        // setInterval nhận vào 2 tham số
+        // tham số 1: thên hàm
+        // tham số 2: thời gian vòng lặp chạy mls
+        // đoạn code trên có ý nghĩa : cứ 1s thì gọi hàm hamKiemTraVongLap 1 lần
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

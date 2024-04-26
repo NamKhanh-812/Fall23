@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ontap.js"></script>
+</head>
+<body style="text-align: center;">
+    <h1>Thông tin cá nhân</h1>
+    <form onsubmit="return false">
+        <input type="text" id="hoTen" placeholder="Nhập họ tên ">
+        <div id="loiTen" style="color: red; display: none;">Thông tin bắt buộc</div>
+        <br>
+        <input type="text" id="namSinh" placeholder="Nhập năm sinh ">
+        <div id="loiNam" style="color: red; display: none;">Thông tin bắt buộc</div>
+        <div id="loiSoNam" style="color: red; display: none;">Năm sinh phải là số</div>
+        <div id="loiSoNamSai" style="color: red; display: none;">Năm sinh phải nhỏ hơn năm hiện tại</div>
+        <br>
+        <input type="text" id="soDT" placeholder="Nhập số điện thoại ">
+        <div id="loiSdt" style="color: red; display: none;">Thông tin bắt buộc</div>
+        <div id="loiSdtSo" style="color: red; display: none;">Số điện thoại phải là số</div>
+        <div id="loiSdt10KT" style="color: red; display: none;">Số điện thoại phải có đủ 10 ký tự</div>
+    </form>
+    <div>
+        <br>
+        <input type="radio" name="gioiTinh" value="Nam"> Nam
+        <input type="radio" name="gioiTinh" value="Nữ"> Nữ
+        <input type="radio" name="gioiTinh" value="Không xác định"> Không xác định
+        <div id="loiGT" style="color: red; display: none;">Thông tin bắt buộc</div>
+    </div>
+    <button onclick="validateOT()">Lưu</button>
+    <br>
+    <br>
+    <br>
+    <h1>THÔNG TIN ĐĂNG NHẬP</h1>
+    <form onsubmit="return false">
+        <input type="text" id="tenDangNhap" placeholder="Nhập tên đăng nhập">
+        <div id="loiDN" style="color : red; display: none;">Thông tin bắt buộc</div>
+        <div id="loiDNKyTu" style="color : red; display: none;">Chỉ chứa chữ không dấu và số</div>
+        <br>
+        <input type="text" id="matKhau" placeholder="Nhập mật khẩu">
+        <div id="loiMKKyTu" style="color : red; display: none;">Chỉ chứa chữ không dấu và số và các ký tự (!@#$%^&*)</div>
+        <div id="loiMK8" style="color : red; display: none;">Phải từ 8 ký tự trở lên</div>
+        <div id="loiMKmanh" style="color : green; display: none;">Mật Khẩu mạnh</div>
+        <div id="loiMKbth" style="color : gray; display: none;">Mật khẩu bình thường</div>
+        <div id="loiMKyeu" style="color : orangered; display: none;">Mật khẩu yếu</div>
+    </form>
+    <br>
+    <button onclick="validateDN()">Lưu</button>
+</body>
+</html>

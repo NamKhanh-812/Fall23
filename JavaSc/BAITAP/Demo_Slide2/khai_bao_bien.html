@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Demo đặt tên biến");
+
+        // Demo cách đặt tên biến 
+        // Theo js coding convention
+        //Thì khuyến khích đặt tên biến theo lowerCameCase 
+
+        let tenTruong = "FPT Poly";
+        let tenLop = "JS Cơ bản";
+
+        console.log(tenTruong);
+        console.log(tenLop);
+
+        // Cách đặt tên biến khác
+        let ten_truong = "FPT Poly TVB";
+        let ten_truong_02 = "FPT Poly 02";
+
+        console.log(ten_truong);
+        console.log(ten_truong_02);
+
+        // Các cách khai báo biến
+        console.log("Demo các cách khai báo biến");
+
+        // Có 3 khai báo biến
+        //1. const | Dùng để khai báo hằng số. Biến có giá trị không thay đổi
+        //2. let   | Dùng để khai báo biến cục bộ. Có phạm vi trong scope {}
+        //3. var   | Dùng để khai báo biến toàn cục. Có phạm vi toàn bộ file
+
+
+        console.log("Demo dùng const");
+        const bienHangSo = "Phụ nữ luôn luôn đúng";
+        console.log(bienHangSo);
+        // bienHangSo = "Có thể sai";
+
+        console.log("Demo dùng let");
+        {
+            let bienCucBo01 = "Đây là biến cục bộ";
+            console.log(bienCucBo01);
+        }
+        //console.log(bienCucBo01); // Lỗi: Biến không tồn tại
+        
+
+        console.log("Demo dùng var");
+        {
+            var bienToanCuc01 ="Đây là biến toàn cục";
+            console.log(bienToanCuc01);
+        }
+        console.log(bienToanCuc01);
+
+
+        //Lưu ý:
+        //1. Nên đặt tên biến theo JS coding convention là lowerCameCase
+        //2. Hãy dùng const khii biến có giá trị không đổi
+        //3. Nên dùng let nhiều nhất có thể
+        // 4. Chỉ dùng var khi không thể dùng được let
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

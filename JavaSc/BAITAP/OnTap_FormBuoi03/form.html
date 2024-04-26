@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <h1>Form đăng ký thông tin cho nhân viên</h1>
+
+        <h2>1. Thông tin cá nhân</h2>
+    
+        <!-- Input họ và tên -->
+        <div>
+            <span>Họ và tên:</span>
+            <input type="text" id="ho-va-ten">
+            <p id="loi-hvt" style="color: red; display: none;">Họ và tên là thông tin bắt buộc</p>
+        </div>
+
+        <!-- Input năm sinh -->
+        <div>
+            <span>Năm sinh:</span>
+            <input type="text" id="nam-sinh">
+            <p id="loi-ns-bat-buoc" style="color: red; display: none;">Năm sinh là thông tin bắt buộc</p>
+            <p id="loi-ns-number" style="color: red; display: none;">Năm sinh phải là số</p>
+            <p id="loi-ns-tuong-lai" style="color: red; display: none;">Năm sinh không được ở tương lai</p>
+        </div>
+
+        <!-- Input số điện thoại -->
+        <div>
+            <span>Số điện thoại:</span>
+            <input type="text" id="so-dien-thoai">
+            <p id="loi-sdt-bat-buoc" style="color: red; display: none;">Số điện thoại là thông tin bắt buộc</p>
+            <p id="loi-sdt-number" style="color: red; display: none;">Số điện thoại phải là số</p>
+            <p id="loi-sdt-10-ky-tu" style="color: red; display: none;">Số điện thoại phải gồm 10 ký tự</p>
+        </div>
+
+
+         <!-- Input Giới tính -->
+         <div>
+            <span>Giới tính:</span>
+            <input type="radio" name="gioi-tinh" value="Nam"> Nam
+            <input type="radio" name="gioi-tinh" value="Nữ"> Nữ
+            <input type="radio" name="gioi-tinh" value="Không"> Không Xác Định
+            <p id="loi-gioi-tinh-bat-buoc" style="color: red; display: none;">Giới tính là thông tin bắt buộc</p>
+        </div>
+    
+    
+        <!-- Khu vực button -->
+        <div>
+            <br>
+            <button onclick="validateForm()">Lưu Thông Tin</button>
+        </div>
+    </form>
+
+
+
+    
+    <!-- Import JS -->
+    <script src="form.js"></script>
+</body>
+</html>
